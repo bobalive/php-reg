@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container d-flex flex-column align-items-center">
+    <h1 class="text-center">Connect with us</h1>
+    <form class="w-50 p-3 display:flex; m-3" method="post"  enctype="multipart/form-data" action="index.php">
+
+    <div class="mb-3 row ">
+    <label for="inputName" class="col-sm-2 col-form-label">First&nbspname</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" name = "firstName" id="inputName" >
+    </div>
+  </div>
+  <div class="mb-3 row ">
+    <label for="lastName" class="col-sm-2 col-form-label">Last&nbspName</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" name = "lastName" id="lastName" >
+    </div>
+  </div>
+   <div class="mb-3 row ">
+    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-5">
+      <input type="email" class="form-control" name = "email" id="inputEmail" required>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label" >Password</label>
+    <div class="col-sm-5">
+      <input type="password" class="form-control" name = "password" id="inputPassword" required>
+    </div>
+  </div>
+    
+
+    <div class="form-check_gender d-flex align-items-center mb-3 row">
+        <span class="gender col-sm-2">Gender</span>
+        <div class="radio  col-sm-3 d-flex">
+            <label for="male" class="col-form-label d-flex" >Male
+            <input type="radio" class="form-chech-input mx-1" id="male" value="male" name ="gender" required>
+            </label>
+            <label for="female" class="col-form-label mx-3 d-flex">Female
+            <input type="radio" class="form-chech-input mx-1" id="female"  value="female" name ="gender">
+            </label>
+        </div>
+    </div>
+    <div class="form-check_gender d-flex flex-column row mb-3">
+      <span class="gender col-sm-10 mb-1 mt-2">where did you hear about us:</span>
+      <div class="radio  col-sm-10 d-flex">
+        <label for="socialMedia" class="col-form-label d-flex">Social Media
+        <input type="checkbox" class="form-chech-input mx-1" id="socialMedia" value="socialMedia" name ="from[]">
+          </label>
+          <label for="Friend" class="col-form-label mx-3 d-flex">Friend
+          <input type="checkbox" class="form-chech-input mx-1" id="Friend"  value="friend" name ="from[]">
+          </label>
+          <label for="other" class="col-form-label mx-3 d-flex">Other
+          <input type="checkbox" class="form-chech-input mx-1" id="other"  value="other" name ="from[]">
+          </label>
+      </div>
+  </div>
+
+      <div class="form-group col-sm-4 px-0 mb-3">
+      <label for="inputState">Country</label>
+      <select id="inputState" class="form-control" name = "country">
+        <option selected value ="UZB">UZB</option>
+        <option value = "RU">RU</option>
+        <option value = "KZ">KZ</option>
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">What do you want</label>
+      <textarea class="form-control " id="exampleFormControlTextarea1" rows="3" name="about"></textarea>
+    </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" name = "file" id="exampleFormControlFile1">
+      </div>
+
+      <div class="row mb-3">
+        <button type="submit" class="btn btn-primary col-sm-3 mt-3 mx-3">Send</button>
+        <button type="reset" class="btn btn-danger col-sm-3 mt-3 mx-3">reset</button>
+      </div>
+
+      <a href="table.php?page=1" class="btn btn-primary stretched-link">Users Table</a>
+
+        
+      
+  </form>
+  <hr>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</div>
+
+  
+</body>
+</html>

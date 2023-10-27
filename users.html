@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  <table class="table">
+  <thead class="table-light">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">first_name</th>
+        <th scope="col">last_name</th>
+        <th scope="col">email</th>
+        <th scope="col">password</th>
+        <th scope="col">gender</th>
+        <th scope="col">heard from</th>
+        <th scope="col">country</th>
+        <th scope="col">about</th>
+        <th scope="col">fileName</th>
+        <th scope="col"> file</th>
+
+
+        
+      </tr>
+    </thead>
+  </thead>
+  <tbody>
+    <?php if (isset($tickets)):?>
+    <?php foreach($tickets as $ticket):?>
+    <?php $id = $ticket['id'];?>
+    <tr>
+      <th scope="row"><?php  echo $ticket['id'] ?></th>
+      <td><?php echo $ticket['firstName'] ?></td>
+      <td><?php echo $ticket['lastName'] ?></td>
+      <td><?php echo $ticket['email'] ?></td>
+      <td><?php echo $ticket['password'] ?></td>
+      <td><?php echo $ticket['gender'] ?></td>
+      <td><?php echo $ticket['heardFrom'] ?></td>
+      <td><?php echo $ticket['country'] ?></td>
+      <td><?php echo $ticket['about'] ?></td>
+      <td><?php echo $ticket['fileName'] ?></td>
+      <td><a href=<?php echo "download.php?id=$id"?>><?php echo $ticket['fileName'] ?></a></td>
+    </tr>
+    <?php endforeach;?>
+    <?php endif;?>
+  </tbody>
+</table>
+
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item ">
+      <a class="page-link" href="<?php echo 'table.php?page='.$previous_page?>">Previous</a>
+    </li>
+    <?php for($i = 1; $i <= $page_count ; $i++):?>
+    <?php if($i == $page):?>
+  
+    <li class="page-item active" aria-current="page"><a class="page-link" href=<?php echo 'table.php?page='.$i?>"><?php echo $i?></a></li>
+    <?php else:?>
+    <li class="page-item"><a class="page-link" href=<?php echo 'table.php?page='.$i?>><?php echo $i?></a></li>
+    <?php endif;?>
+    <?php endfor;?>
+
+
+      <a class="page-link" href="<?php echo 'table.php?page='.$next_page?>">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<a href="index.php" class="btn btn-primary stretched-link">contact us</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>
